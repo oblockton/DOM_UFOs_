@@ -20,7 +20,7 @@ dropdown.addEventListener('click', element => {
   buildTable();
 });
 
-// Build table upon initial page loveland
+// Build table upon initial page load.
 function buildTable() {
   // tablebody.innerHTML = "";
   //  Iterate through dataset insterting rows.
@@ -41,7 +41,7 @@ function buildTable() {
   }
 }
 
-//  the element is accepts is a dropdown item.
+//  the element it accepts is a dropdown item.
 function searchdata(element) {
   const searchInput = input.value.trim().toLowerCase(); //grab input value
   const button = element.target; // grab the button that was clicked
