@@ -22,11 +22,13 @@ dropdown.addEventListener('click', element => {
 
 // Build table upon initial page load.
 function buildTable() {
-  // tablebody.innerHTML = "";
-  //  Iterate through dataset insterting rows.
+  tablebody.innerHTML = "";
+   //Iterate through dataset insterting rows.
   for (let i=0; i<dataset.length;i++){
     let sighting = dataset[i];  // Set 'sighting' to the current object of the loops iteration through dataset
     let sighting_key = Object.keys(sighting); // keys of each sighting correspond to table columns created in index.html
+    console.log(sighting_key);
+    
     // this declared item will be used to create a cell w/ value for ea key:value in dataset
 
     // insert row for each sighting;
@@ -37,9 +39,9 @@ function buildTable() {
       let key = sighting_key[j]; // store the key string so we can access the value for the current object of the outer for loop.
       let cell = row.insertCell(j); // insert cell indexed
       cell.innerText = sighting[key]; //the current 'sighting' of the outer for loop has a value accessed by 'key' . set cell value to key's value
-    }
-  }
-}
+    };
+  };
+};
 
 //  the element it accepts is a dropdown item.
 function searchdata(element) {
